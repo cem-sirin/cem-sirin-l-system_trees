@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plant Sketches</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="libraries/quicksettings.js"></script>
+  <script src="libraries/p5.gui.js"></script>
+</head>
+
+<body>
+  <div>
+
+    <div id="child1">
+      <script src="sketch.js"></script>
+    </div>
+
+    <div id="child2">
+      <div class="field">
+        <label class="label">Iterations:</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="7" id="iterations">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Angle:</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="20" id="angle">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Initialisation:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="X" id="initialisation">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Rule for F:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="FF" id="ruleF">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Rule for X:</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="F[+X]F[-X]+X" id="ruleX">
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link" id="button-system" onclick="updateMe()">Generate!</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light" id="button-system">or chill...</button>
+        </div>
+      </div>
+      <div>
+        <h1>Description</h1>
+        <p>
+          An L-system or Lindenmayer system is a parallel rewriting system and a type of formal grammar. An L-system
+          consists of an alphabet of symbols that can be used to make strings, a collection of production rules that
+          expand each symbol into some larger string of symbols, an initial "axiom" string from which to begin
+          construction, and a mechanism for translating the generated strings into geometric structures. [Wikipedia]
+        </p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
